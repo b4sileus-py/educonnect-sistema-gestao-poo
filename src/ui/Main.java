@@ -14,7 +14,9 @@ public class Main {
     public static void main(String[] args) {
 
         carregarDadosIniciais();  // Pré Cadastro pra polpar tempo na elaboração dos prints no Word
-
+        // Como o cadastro salva num banco temporário, fica inviável ter que fazer o cadastro repetidas vezes
+        // Um pré-cadastro iniciando com o ssitema facilita na hora de fazer as demonstrações do sistema
+        
         realizarLogin(); // login inicial
 
         boolean executando = true;
@@ -365,3 +367,4 @@ public class Main {
         }
     }
 }
+
