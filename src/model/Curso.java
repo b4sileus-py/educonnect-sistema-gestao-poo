@@ -1,6 +1,5 @@
 package src.model;
 
-// Classe base representando um curso.
 // As subclasses (Presencial e EAD) vão especializar detalhes específicos.
 public class Curso {
     protected String nome;
@@ -25,4 +24,5 @@ public class Curso {
     public String gerarRelatorio() {
         return detalharCurso();
     }
+
 }
