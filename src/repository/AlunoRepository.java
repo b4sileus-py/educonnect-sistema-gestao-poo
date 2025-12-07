@@ -12,7 +12,7 @@ public class AlunoRepository {
     // Lista que guarda todos os alunos cadastrados
     private List<Aluno> alunos = new ArrayList<>();
 
-    // Salva um aluno no "banco" (lista)
+    // Salva o aluno no "banco" (lista)
     public void salvar(Aluno aluno) {
         alunos.add(aluno);
     }
@@ -29,3 +29,4 @@ public class AlunoRepository {
                 .findFirst();
     }
 }
+
