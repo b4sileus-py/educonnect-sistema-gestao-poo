@@ -1,4 +1,4 @@
-package src.ui; // Porque este meu main.java está com esse erro de compilação? como resolver ?
+package src.ui;
 
 import src.model.*;
 import src.service.EscolaService;
@@ -11,12 +11,9 @@ public class Main {
 
     private static Usuario usuarioLogado;
 
-    // ========================================================================
-    // MAIN
-    // ========================================================================
     public static void main(String[] args) {
 
-        carregarDadosIniciais();  // <<==== PRÉ-CADASTRO COMPLETO
+        carregarDadosIniciais();  // Pré Cadastro pra polpar tempo na elaboração dos prints no Word
 
         realizarLogin(); // login inicial
 
@@ -42,9 +39,7 @@ public class Main {
         System.out.println("Sistema finalizado. Até a próxima!");
     }
 
-    // ========================================================================
-    // LOGIN
-    // ========================================================================
+    // Login
     private static void realizarLogin() {
         boolean autenticado = false;
 
@@ -71,9 +66,8 @@ public class Main {
         }
     }
 
-    // ========================================================================
-    // PRÉ-CADASTRO AUTOMÁTICO
-    // ========================================================================
+
+    // Pré-Cadastro de algumas pessoas pra facilitar os prints
     private static void carregarDadosIniciais() {
 
         System.out.println("\n[PRÉ-CADASTRO] Inicializando dados...\n");
@@ -106,7 +100,7 @@ public class Main {
         service.criarTurma("CCOMP-2N", p2, c4);
         service.criarTurma("ECIV-T3", p5, c5);
 
-        // ---------------- MATRÍCULAS (DISTRIBUÍDAS) ----------------
+        // ---------------- MATRÍCULAS ----------------
         service.adicionarAlunoTurma("2025-001", "ADS-A");     // Roberto → ADS
         service.adicionarAlunoTurma("2025-002", "PDG-01");    // Ana → Pedagogia
         service.adicionarAlunoTurma("2025-003", "ARQ-M1");    // Marcos → Arquitetura
@@ -123,9 +117,7 @@ public class Main {
         System.out.println("[PRÉ-CADASTRO] Dados carregados com sucesso!\n");
     }
 
-    // ========================================================================
-    // MENUS
-    // ========================================================================
+    // Menus, sepeparados por contexto
     private static boolean menuAdministrador() {
         System.out.println("\n ----------- MENU ADMINISTRADOR ----------- ");
         System.out.println("1) Cadastrar Aluno");
@@ -200,17 +192,12 @@ public class Main {
         return true;
     }
 
-    // ========================================================================
-    // UTILITÁRIOS
-    // ========================================================================
     private static int lerInteiro() {
         try { return Integer.parseInt(scanner.nextLine()); }
         catch (Exception e) { return -1; }
     }
-
-    // ========================================================================
-    // CADASTROS
-    // ========================================================================
+    
+    // Cadastro
     private static void cadastrarAluno() {
         System.out.print("Nome: ");
         String nome = scanner.nextLine();
@@ -331,9 +318,7 @@ public class Main {
         System.out.println(ok ? "Avaliação registrada!" : "Erro ao registrar.");
     }
 
-    // ========================================================================
-    // RELATÓRIOS
-    // ========================================================================
+    // Relatórios
     private static void gerarRelatoriosAdmin() {
         System.out.println("\n============ RELATÓRIO DE ALUNOS ============");
         service.alunoRepo.listar().forEach(a -> System.out.println(a.gerarRelatorio()));
@@ -353,9 +338,7 @@ public class Main {
         service.turmaRepo.listar().forEach(t -> System.out.println(t.resumo()));
     }
 
-    // ========================================================================
-    // FUNÇÕES DO ALUNO
-    // ========================================================================
+    // Funções do Aluno
     private static void mostrarAvaliacoesAluno() {
         Aluno a = (Aluno) usuarioLogado;
 
