@@ -1,8 +1,6 @@
 package src.model; // Administrador.java
 
-// Administrador é um tipo especial de usuário.
-// Vai poder futuramente ter permissões exclusivas no sistema.
-
+// O único com acesso privilegiado. Terá acesso a todas as funções do sistema..
 public class Administrador extends Usuario {
 
     public Administrador(String nome, String login, String senha) {
@@ -13,4 +11,5 @@ public class Administrador extends Usuario {
     public String gerarRelatorio() {
         return "Administrador: " + nome + " (login: " + login + ")";
     }
+
 }
