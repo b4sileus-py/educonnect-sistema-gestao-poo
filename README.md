@@ -122,7 +122,7 @@ https://github.com/b4sileus-py/educonnect-sistema-gestao-poo
 
 ## Autor
 
-Roberto Siqueira
-RA: 24411202-5 (UniCesumar)
+Roberto Siqueira  
+RA: 24411202-5 (UniCesumar)  
 Curso: Análise e Desenvolvimento de Sistemas
 
