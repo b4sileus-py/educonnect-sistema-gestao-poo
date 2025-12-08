@@ -1,4 +1,4 @@
-# EduConnect – Sistema de Gestão Educacional (POO)
+# EduConnect - Sistema de Gestão Educacional (POO)
 
 Projeto desenvolvido como trabalho final da disciplina Imersão em Programação Orientada a Objetos, aplicando conceitos fundamentais de POO e Arquitetura em Camadas.
 
